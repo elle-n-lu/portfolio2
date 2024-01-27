@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: 'gogolef';
+    src: url('/JosefinSlab-VariableFont_wght.ttf');
+}
+
+
+.codywork{
+    transform-origin: top;
+    transform: translateY(0);
+    animation: moveAni 1.5s ease-in-out forwards;
+}
+
+@keyframes moveAni {
+    0% {
+        transform:translateY(0);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
+.codyworkout{
+    transform-origin: top;
+    transform: translateY(0);
+    animation: moveoutAni 1.5s ease-in-out forwards;
+}
+
+@keyframes moveoutAni {
+    100% {
+        transform:translateY(0);
+    }
+    0% {
+        transform: translateY(250px);
+    }
+}
+
+
+#introduction{
+    transform-origin: bottom;
+    transform: translate(100%);
+    opacity: 0;
+    animation: scaleAni 1.5s ease-in-out forwards;
+}
+
+@keyframes scaleAni {
+    0% {
+        transform:translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#introductionOut{
+    /* transform-origin: bottom;
+    transform: translate(100%); */
+    animation: introductionoutAni 1.5s ease-in-out forwards;
+}
+
+@keyframes introductionoutAni {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;;
+    }
+}
+
+.textstyle{
+    font-family: 'gogolef';
+    font-weight: bold;
+}
+
+#playbtn:hover{
+    transform: scale(1.7);
+    background-color: rgba(194, 5, 37, 0.682);
+}
+
+#borderImg{
+    border-image: url('/Vec_border.png') 50 stretch;
+    border-bottom: 20px solid transparent;
+}
