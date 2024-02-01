@@ -16,7 +16,7 @@
         transform:translateY(0);
     }
     100% {
-        transform: translateY(250px);
+        transform: translateY(200px);
     }
 }
 .codyworkout{
@@ -30,12 +30,17 @@
         transform:translateY(0);
     }
     0% {
-        transform: translateY(250px);
+        transform: translateY(200px);
     }
 }
 
 
 #introduction{
+    top: 18vh;
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(70, 70, 70, 0.682);
     transform-origin: bottom;
     transform: translate(100%);
     opacity: 0;
@@ -80,4 +85,10 @@
 #borderImg{
     border-image: url('/Vec_border.png') 50 stretch;
     border-bottom: 20px solid transparent;
+}
+
+@media screen and (max-width:700px) {
+    #introduction{
+    position: relative;
+    }
 }

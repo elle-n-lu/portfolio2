@@ -42,20 +42,6 @@ export default function Home() {
     };
   }, [modal]);
 
-  const introEle = (text1: string, text2: string, top: string, left: any, right: any,
-    height: any, width: any) => (
-    <div id='introduction'
-      className="p-8 text-xl"
-      style={{
-        position: 'absolute', top: top,
-        height: height, width: width,
-        left: left,
-        right: right,
-        zIndex: '1',
-        backgroundColor: '#00000091',
-        backdropFilter: 'blur(4px)'
-      }}><strong className="text-3xl">{text1}</strong>{text2}</div>
-  )
 
   return (<div>
 
@@ -87,9 +73,11 @@ export default function Home() {
           </svg>
         </a>
         <div id="avatar" className=" h-20 w-20 bg-white rounded-full hover:border-2 hover:border-second"
-        style={{backgroundImage:'url(/avatar.png)',
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat'}}
+          style={{
+            backgroundImage: 'url(/avatar.png)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
           onClick={(e) => {
             e.stopPropagation();
             setModal(!modal)
@@ -97,15 +85,19 @@ export default function Home() {
         </div>
       </div>
       {modal && <div ref={modalRef}
-        className='textstyle text-white flex rounded-md '
+        className='textstyle text-white flex rounded-md items-center justify-center '
       >
-        {introEle('My', 'passion drives me ot find new ways ot improve myself and my technical skils.',
-          '18vh', '35vh', '', '22vh', '20vw')}
-        {introEle("I'", 'am a passionate ful stack developer that enjoys developing web and mobile apps.',
-          '21vh', '', '70vh', '25vh', '20vw')}
-        {introEle('I', ' take responsibility for my actions and work well with others.',
-          '25vh', '', '35vh', '25vh', '15vw')}
-      </div>}
+        <div id="introduction"
+          className="text-md md:text-2xl lg:text-3xl"
+        ><p className="md:my-1"><strong className="text-2xl md:text-5xl" id="borderImg">My&nbsp;</strong>
+        &nbsp; passion drives me to find new ways to<span id="borderImg"> improve myself and my technical skils</span>.</p><br />
+
+         <p className=" md:my-1">I&apos;am a<span id="borderImg"> passionate ful stack developer</span>
+           that enjoys developing web and mobile apps.</p><br />
+          I take responsibility for my actions and work well with others.<br />
+        </div>
+      </div>
+      }
       <div className={` ${modal ? 'codywork' : 'codyworkout'}`} style={{
         zIndex: '2',
       }}>
