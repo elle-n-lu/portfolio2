@@ -35,6 +35,12 @@ const Work3: React.FC<work3Props> = ({ setModals, setGame }) => {
                 <p className={techstack}>Flask, PostgreSQL</p>
                 <p className={techstack}>React, Next.js, TypeScript, TailwindCSS</p>
                 <p className={techstack}>Git, Heroku, Netlify </p>
+                <div className='flex items-center  '>
+                    <a href="https://shownbooking-a10ea6e13f6b.herokuapp.com/admin" className={`${techstack} h-6 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400`} >Check Website</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6 animate__animated animate__fadeInLeftBig">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+                    </svg>
+                </div>
             </div>
 
         </div>
